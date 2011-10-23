@@ -6,7 +6,7 @@ A node.js script that will download your free mp3 recommadations from Last.fm
 *Requires* libxml-to-js. You can install it by: npm install libxml-to-js
 
 Usage
------
+-------
 
 Download the app.js script, edit $.config:
 
@@ -20,7 +20,7 @@ Download the app.js script, edit $.config:
 
 And then you can run the script by node app.js. Enjoy!
 
-===  Other Configurations:
+### Other Configurations:
 
 *userAgent*: User agent used for downloading. Default to Linux FF 7.0.
 
