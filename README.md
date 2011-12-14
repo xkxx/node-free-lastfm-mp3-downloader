@@ -5,6 +5,8 @@ A node.js script that will download your free mp3 recommadations from Last.fm
 
 *Requires* libxml-to-js. You can install it by: npm install libxml-to-js
 
+libxml-to-js has a weird bug that causes segmentation fault or errors like 'Object 0 has no method \'prefix\''. I can do nothing about it but to sugguest you try repeatly till it works.
+
 Usage
 -------
 
