@@ -1,6 +1,6 @@
 /* Last.fm Free MP3 Downloader
-	@author xkxx
-	@copyright 2012
+	@author xkx
+	@copyright 2011
 	@lisence GPL 3.0
 */
 
@@ -17,7 +17,7 @@ $.config = {
 	cacheFile: 'lastfm-rss.json',
 	downloadedFile: 'lastfm-downloaded.json',
 	mp3Folder: 'Downloads',
-	userAgent: 'Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/15.0',
+	userAgent: 'Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0',
 	cacheRefresh: 1,
 	maxRetry: 3,
 	speedNotify: 10,
@@ -35,14 +35,7 @@ function url_to_object(input) {
 		path: parsed.pathname
 	};
 }
-function flaten(array, buffer) {
-	var bufferPtr = 0;
-	for(var i in array) {
-		array[i].copy(buffer, bufferPtr);
-		bufferPtr += array[i].length;
-	}
-	return buffer;
-}
+
 function fetch_for_url(options, callback, encoding) {
 	var data = [], dataLength = 0, contentLength, timer, lastRecordSpeed = 0, haltCount = 0, cbcalled = false;
 	http.get(options, function(res) {
@@ -68,8 +61,7 @@ function fetch_for_url(options, callback, encoding) {
 				callback();
 				return;
 			}
-			var buffer = new Buffer(dataLength);
-			buffer = flaten(data, buffer);
+			var buffer = Buffer.concat(data, dataLength);
 			if(encoding) buffer = buffer.toString(encoding);
 			clearInterval(timer);
 			cbcalled = true;
