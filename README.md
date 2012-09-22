@@ -1,14 +1,18 @@
 node-free-lastfm-mp3-downloader
 ============
 
-A node.js script that will download your free mp3 recommadations from Last.fm
+A command-line utility for downloading last.fm free recommmended mp3's
 
 *Requires* libxml-to-js. You can install it by: npm install libxml-to-js
 
 Usage
 -------
 
-Download the app.js script, edit $.config:
+To start the script, type `node app.js`.
+
+### Configurations
+
+Edit `$.config` in `app.js`:
 
 *rssURL*: the url to your last.fm free mp3 download RSS. You can find it on http://last.fm/home .
 
@@ -17,8 +21,6 @@ Download the app.js script, edit $.config:
 *downloadedFile*: where a record of downloaded mp3 will be stored. Default to lastfm-downloaded.json .
 
 *mp3Folder*: where downloaded mp3 will be saved. Default to /Downloads.
-
-And then you can run the script by node app.js. Enjoy!
 
 ### Other Configurations:
 

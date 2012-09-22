@@ -1,0 +1,19 @@
+{
+  "name": "node-free-lastfm-mp3-downloader",
+  "author": "xkxx",
+  "description": "A command-line utility for downloading last.fm free recommmended mp3's",
+  "scripts": {
+    "start": "node ./app.js"
+    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xkxx/node-free-lastfm-mp3-downloader.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "license": "GPL 3.0",
+  "dependencies": {
+    "libxml-to-js": "*"
+  }
+}
