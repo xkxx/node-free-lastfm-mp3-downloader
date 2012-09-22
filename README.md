@@ -3,9 +3,7 @@ node-free-lastfm-mp3-downloader
 
 A command-line utility for downloading last.fm free recommmended mp3's
 
-*Requires* libxml-to-js. You can install it by: npm install libxml-to-js
-
-libxml-to-js has a weird bug that causes segmentation fault or errors like 'Object 0 has no method \'prefix\''. I can do nothing about it but to sugguest you try repeatly till it works.
+*Requires* libxml-to-js. You can install it by: `npm install libxml-to-js`
 
 Usage
 -------
@@ -16,7 +14,7 @@ To start the script, type `node app.js`.
 
 Edit `$.config` in `app.js`:
 
-*rssURL*: the url to your last.fm free mp3 download RSS. You can find it on http://last.fm/home .
+*rssURL*: the url to your last.fm free mp3 download RSS. You can find it at http://last.fm/home .
 
 *cacheFile*: where the downloaded RSS will be cached. It's default to lastfm-rss.json .
 
